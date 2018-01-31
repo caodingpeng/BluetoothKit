@@ -592,24 +592,24 @@ public class BleConnectWorker implements Handler.Callback, IBleConnectWorker, IB
             return false;
         }
 
-        BluetoothGattDescriptor descriptor = characteristic.getDescriptor(Constants.CLIENT_CHARACTERISTIC_CONFIG);
+        // BluetoothGattDescriptor descriptor = characteristic.getDescriptor(Constants.CLIENT_CHARACTERISTIC_CONFIG);
 
-        if (descriptor == null) {
-            BluetoothLog.e(String.format("getDescriptor for notify null!"));
-            return false;
-        }
+        // if (descriptor == null) {
+        //     BluetoothLog.e(String.format("getDescriptor for notify null!"));
+        //     return false;
+        // }
 
-        byte[] value = (enable ? BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE : BluetoothGattDescriptor.DISABLE_NOTIFICATION_VALUE);
+        // byte[] value = (enable ? BluetoothGattDescriptor.ENABLE_NOTIFICATION_VALUE : BluetoothGattDescriptor.DISABLE_NOTIFICATION_VALUE);
 
-        if (!descriptor.setValue(value)) {
-            BluetoothLog.e(String.format("setValue for notify descriptor failed!"));
-            return false;
-        }
+        // if (!descriptor.setValue(value)) {
+        //     BluetoothLog.e(String.format("setValue for notify descriptor failed!"));
+        //     return false;
+        // }
 
-        if (!mBluetoothGatt.writeDescriptor(descriptor)) {
-            BluetoothLog.e(String.format("writeDescriptor for notify failed"));
-            return false;
-        }
+        // if (!mBluetoothGatt.writeDescriptor(descriptor)) {
+        //     BluetoothLog.e(String.format("writeDescriptor for notify failed"));
+        //     return false;
+        // }
 
         return true;
     }

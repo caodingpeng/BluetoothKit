@@ -155,7 +155,7 @@ public class BluetoothSearchRequest implements Handler.Callback {
 		@Override
 		public void onDeviceFounded(SearchResult device) {
 			// TODO Auto-generated method stub
-			BluetoothLog.v(String.format("onDeviceFounded %s", device));
+			//BluetoothLog.v(String.format("onDeviceFounded %s", device));
 			notifyDeviceFounded(device);
 		}
 

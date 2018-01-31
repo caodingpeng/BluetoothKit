@@ -49,7 +49,9 @@ public class BleNotifyRequest extends BleRequest implements WriteDescriptorListe
         if (!setCharacteristicNotification(mServiceUUID, mCharacterUUID, true)) {
             onRequestCompleted(Code.REQUEST_FAILED);
         } else {
-            startRequestTiming();
+            //startRequestTiming();
+
+            onRequestCompleted(Code.REQUEST_SUCCESS);
         }
     }
 
